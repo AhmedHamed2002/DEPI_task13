@@ -1,0 +1,183 @@
+:root{
+    --main_color:rgb(185, 125, 52);
+}
+
+@keyframes move {
+    0%{
+        transform: translateY(-10px) ; 
+        
+    }
+    50%{
+        transform: translateY(0px);
+    }
+    100%{
+        transform: translateY(-10px);
+    }
+}
+
+body{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    background-image: url('../images/background.jpg');
+    background-size: 100% 100% ;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Playfair Display", serif;
+}
+
+main{
+    width: 80%;
+    background-color: rgba(26, 25, 25, 0.652);
+    border-radius: 10px;
+    padding-block: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    h1{
+        font-family: "Pacifico", cursive;
+        color: var(--main_color); 
+        font-size: 40px;
+    }
+
+    form{
+        width: 95%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        border-top: 2px dotted var(--main_color);   
+        border-bottom: 2px dotted var(--main_color);
+        padding-block: 30px; 
+        
+        .text{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(160deg,#DC5F00 , rgb(209, 153, 92),#d3bba8);
+            background-clip: text;
+            color: transparent;
+            font-size: 20px;
+            animation: move 4s linear infinite; 
+
+            p{
+                padding-inline: 10px;
+                font-family: "Playwrite BE VLG", system-ui;
+                text-align: center;
+            }
+        }
+
+        .name{
+            width: 97%;
+            color: rgb(215, 202, 181);
+            
+            label{
+                font-size: 18px;
+                i{
+                    margin-right: 10px;
+                }
+            }
+
+            input{
+                width: 90%;
+                padding-block: 10px;
+                padding-left: 20px;
+                border:none;
+                border-radius: 5px;
+                margin-block: 15px;
+                caret-color: #DC5F00;
+                font-weight: bold;
+                color: #DC5F00;
+                font-size: 16px;
+
+                &:focus{
+                    box-shadow: 0px 0px 2px 5px orange;
+                }
+            }
+        }
+        .url{
+            width: 97%;
+            color: rgb(215, 202, 181);
+            
+            label{
+                font-size: 18px;
+                i{
+                    margin-right: 10px;
+                }
+            }
+
+            input{
+                width: 90%;
+                padding-block: 10px;
+                padding-left: 20px;
+                border:none;
+                border-radius: 5px;
+                margin-block: 15px;
+                caret-color: #DC5F00;
+                font-weight: bold;
+                color: #DC5F00;
+                font-size: 16px;
+
+                &:focus{
+                    box-shadow: 0px 0px 2px 5px orange;
+                }
+            }
+        }
+
+    }
+
+    button{
+        margin-top: 30px;
+        border: none;
+        background-color: var(--main_color);
+        padding: 15px 30px;
+        border-radius: 10px;
+        cursor: pointer;
+
+        &:hover{
+            border: 2px solid var(--main_color);
+            background-color: white;
+            color: var(--main_color);
+        }
+    }
+    
+    .table{
+        width: 95%;
+        tbody tr{
+            
+            td .visit{
+                text-decoration: none;
+                background-color: green;
+                color: white;
+                padding: 5px 10px;
+                border-radius: 5px;
+
+                &:hover{
+                    background-color: rgb(26, 95, 14);
+                }
+                &:visited{
+                    background-color: black;
+                }
+            }
+            td .delete{
+                text-decoration: none;
+                background-color: red;
+                color: white;
+                padding: 5px 10px;
+                border-radius: 5px;
+                margin-top: -30px;
+
+                &:hover{
+                    background-color: rgb(199, 31, 31);
+                    border: none;
+                    transform: scale(0.9);
+                }
+            }
+        }
+    }
+}
